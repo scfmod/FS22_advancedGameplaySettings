@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI name="optionsPlaceable">
+    <GuiElement type="empty" profile="uiInGameMenuFrame">
+        <!-- Static page header -->
+        <GuiElement type="empty" profile="ingameMenuFrameHeaderPanel">
+            <GuiElement type="bitmap" profile="ingameMenuGeneralSettingsHeaderIcon" />
+            <GuiElement type="text" profile="ingameMenuFrameHeaderText" text="Placeable options" />
+        </GuiElement>
+
+        <!-- Layout content box -->
+        <GuiElement type="empty" profile="ingameMenuSettingsBox" id="settingsContainer">
+            <GuiElement type="bitmap" profile="topScrollClipper" name="topClipper" />
+            <GuiElement type="bitmap" profile="bottomScrollClipper" name="bottomClipper" />
+
+            <GuiElement type="scrollingLayout" profile="ingameMenuSettingsLayout" id="boxLayout" topClipperElementName="topClipper" bottomClipperElementName="bottomClipper">
+                <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+                    <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="costFactor" onEnterPressed="onEnterPressedTextInput" imeDescription="Cost factor" imePlaceholder="Cost factor" imeTitle="Cost factor" imeKeyboardType="normal" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Cost factor" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Increase or decrease the cost of placeables (0 = free)" />
+                </GuiElement>
+
+                <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+                    <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="displacementCostFactor" onEnterPressed="onEnterPressedTextInput" imeDescription="Displacement cost factor" imePlaceholder="Displacement cost factor" imeTitle="Displacement cost factor" imeKeyboardType="normal" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Displacement cost factor" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Increase or decrease the cost of terrain displacement (0 = free)" />
+                </GuiElement>
+
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disableTerrainDisplacement">
+                    <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+                    <GuiElement type="button" profile="multiTextOptionSettingsRight" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsText" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Disable terrain displacement" />
+                    <GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Disable terrain alterations when placing objects" />
+                </GuiElement>
+
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disablePaintOperation">
+                    <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+                    <GuiElement type="button" profile="multiTextOptionSettingsRight" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsText" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Disable painting" />
+                    <GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Disable painting terrain when placing objects" />
+                </GuiElement>
+
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disableRemoveFoliage">
+                    <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+                    <GuiElement type="button" profile="multiTextOptionSettingsRight" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsText" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Disable removing foliage" />
+                    <GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Disable removing foliage on terrain when placing objects" />
+                </GuiElement>
+
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disableAccessCheck">
+                    <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+                    <GuiElement type="button" profile="multiTextOptionSettingsRight" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsText" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Disable ALL checks for placing objects" />
+                    <GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="" />
+                </GuiElement>
+
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="enableOverlapWithObjects">
+                    <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
+                    <GuiElement type="button" profile="multiTextOptionSettingsRight" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsText" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Enable overlapping" />
+                    <GuiElement type="bitmap" profile="multiTextOptionSettingsBg" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Allow overlapping placeable object with other objects" />
+                </GuiElement>
+
+            </GuiElement>
+        </GuiElement>
+    </GuiElement>
+</GUI>

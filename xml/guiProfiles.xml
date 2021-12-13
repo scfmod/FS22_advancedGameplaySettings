@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUIProfiles>
+    <Presets>
+        <Preset name="colorTransparent" value="0 0 0 0"/>
+        <Preset name="colorWhite" value="1 1 1 1"/>
+
+        <!-- <Preset name="colorMainUI"    value="0.0 1.0 0.0 1.0"/> -->
+        <Preset name="colorMainUI"    value="0.0 1.0 0.0 1.0"/>
+        <Preset name="colorMainUI_90" value="0.0 1.0 0.0 0.9"/>
+        <Preset name="colorMainUI_80" value="0.0 1.0 0.0 0.8"/>
+        <Preset name="colorMainUI_70" value="0.0 1.0 0.0 0.7"/>
+        <Preset name="colorMainUI_60" value="0.0 1.0 0.0 0.6"/>
+        <Preset name="colorMainUI_50" value="0.0 1.0 0.0 0.5"/>
+        <Preset name="colorMainUI_40" value="0.0 1.0 0.0 0.4"/>
+        <Preset name="colorMainUI_30" value="0.0 1.0 0.0 0.3"/>
+        <Preset name="colorMainUI_20" value="0.0 1.0 0.0 0.2"/>
+        <Preset name="colorMainUI_10" value="0.0 1.0 0.0 0.1"/>
+        <Preset name="colorMainUI_6"  value="0.0 1.0 0.0 0.0.6"/>
+
+        <Preset name="colorDisabled" value="0.4 0.4 0.4 1"/>
+
+        <Preset name="colorUVs" value="10px 1010px 4px 4px"/>
+        <Preset name="keyBoardKeyUVs" value="96px 96px 48px 48px"/>
+        <!-- <Preset name="colorFocusBackgroundGradient" value="0.0227 0.5346 0.8519 1" /> -->
+        <Preset name="colorFocusBackgroundGradient" value="0.0 1.0 0.0 1.0" />
+
+        <!-- NEW -->
+        <Preset name="colorGlass" value="0.0036 0.0056 0.0065 0.5"/>
+        <Preset name="colorLightGrey" value="0.0482 0.0482 0.0482 1"/>
+        <Preset name="colorGlassDark" value="0.015 0.015 0.018 0.65"/>
+        <Preset name="colorBlack" value="0 0 0 1"/>
+        <Preset name="colorBlack2" value="0.0075 0.0075 0.0075 1"/>
+        <Preset name="colorBlack3" value="0.013 0.013 0.013 1"/>
+        <Preset name="colorBlack3_97" value="0.013 0.013 0.013 0.97"/>
+        <Preset name="colorBlack3_90" value="0.013 0.013 0.013 0.9"/>
+        <Preset name="colorBlack3_70" value="0.013 0.013 0.013 0.7"/>
+        <Preset name="colorBlack3_0" value="0.013 0.013 0.013 0"/>
+    </Presets>
+
+    <Profile name="scf_baseReference" with="anchorBottomLeft">
+        <Value name="size" value="0 0"/>
+        <Value name="debugEnabled" value="false"/>
+        <Value name="imageFilename" value="g_customBaseUIFilename"/>
+        <Value name="imageSize" value="1024 1024"/>
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+    </Profile>
+
+    <Profile name="scf_uiFullBlurBG" extends="scf_baseReference">
+        <Value name="size" value="1920px 1920px"/>
+        <Value name="imageUVs" value="0 0 1 1"/>
+        <Value name="anchors" value="0 1 0 1" />
+        <Value name="pictureContentMode" value="scaleToFill" />
+
+        <Value name="imageFilename" value="shared/splashBlur.png"/>
+        <Value name="imageFilenames" value="shared/splashBlur_summer.png;shared/splashBlur_fall.png;shared/splashBlur_winter.png;shared/splashBlur_spring.png"/>
+        <Value name="fadeTime" value="2500"/>
+        <Value name="fadeInterval" value="15000"/>
+    </Profile>
+
+    <Profile name="scf_gameMenuHeader" extends="scf_baseReference">
+        <Value name="anchors" value="0 0 0 1" /> <!-- stretched vertically, left -->
+
+        <Value name="position" value="0"/>
+        <Value name="size" value="115px 1080px"/>
+        <Value name="alignmentX" value="right"/>
+        <Value name="alignmentY" value="middle"/>
+        <Value name="imageColor" value="0.0036 0.0042 0.0044 0.3"/>
+    </Profile>
+
+    <Profile name="scf_gameMenuPagingTabList" extends="scf_baseReference" with="anchorMiddleRight">
+        <Value name="size" value="115px 720px"/>
+
+        <Value name="isHorizontalList" value="false"/>
+        <Value name="itemsPerCol" value="9"/>
+        <Value name="itemsPerRow" value="1"/>
+        <!-- <Value name="listItemAutoSize" value="true"/> -->
+        <Value name="listItemWidth" value="115px" />
+        <Value name="listItemHeight" value="80px" />
+        <Value name="keepSelectedInView" value="false" />
+        <!-- <Value name="selectOnScroll" value="true" /> -->
+        <Value name="supportsMouseScrolling" value="true" />
+    </Profile>
+
+    <Profile name="scf_tabbedMenuPageTab" extends="scf_baseReference" with="anchorBottomLeft">
+        <!-- <Value name="fixedWidth" value="true"/> -->
+        <Value name="size" value="115px 80px"/>
+        <Value name="imageColor" value="$preset_colorTransparent"/>
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+
+        <Value name="imageSelectedColor" value="$preset_colorFocusBackgroundGradient"/>
+        <Value name="imageSelectedUVs" value="$preset_colorUVs"/>
+    </Profile>
+
+    <Profile name="scf_buttonBase" extends="scf_baseReference">
+        <Value name="size" value="20px 20px"/>
+        <Value name="textSize" value="18px"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="iconFilename" value="g_customBaseUIFilename"/>
+        <Value name="iconColor" value="$preset_colorWhite"/>
+    </Profile>
+
+    <Profile name="scf_tabbedMenuPageTabButton" extends="scf_buttonBase" with="anchorMiddleCenter">
+        <Value name="fixedWidth" value="true"/>
+        <Value name="size" value="115px 80px"/>
+        <Value name="iconSize" value="64px 64px"/>
+        <Value name="position" value="0"/>
+        <Value name="textAlignment" value="center"/>
+
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorTransparent"/>
+        <Value name="imageFocusedColor" value="$preset_colorMainUI"/>
+        <Value name="imageSelectedColor" value="$preset_colorMainUI"/>
+        <Value name="imageHighlightedColor" value="$preset_colorMainUI_10"/>
+
+        <Value name="iconColor" value="$preset_colorMainUI"/>
+        <Value name="iconFocusedColor" value="$preset_colorWhite"/>
+        <Value name="iconSelectedColor" value="$preset_colorWhite"/>
+        <Value name="iconHighlightedColor" value="$preset_colorWhite"/>
+        <Value name="iconDisabledColor" value="$preset_colorDisabled"/>
+
+        <!-- <Value name="imageColor" value="1 1 1 0 1 1 1 0.5 1 1 1 0 1 1 1 0.5" /> -->
+
+        <Value name="clickSound" value="NONE" />
+    </Profile>
+
+    <Profile name="scf_gameMenuPagingButtonLeft" extends="scf_buttonBase" with="anchorTopCenter">
+        <Value name="size" value="35px 35px"/>
+        <Value name="iconSize" value="35px 35px"/>
+        <Value name="position" value="0px -40px"/>
+        <Value name="textAlignment" value="left"/>
+
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorTransparent"/>
+
+        <Value name="iconUVs" value="$preset_colorUVs"/>
+        <Value name="iconColor" value="$preset_colorMainUI"/>
+        <Value name="iconFocusedColor" value="$preset_colorWhite"/>
+        <Value name="iconDisabledColor" value="$preset_colorGlass"/>
+
+        <Value name="textColor" value="$preset_colorMainUI" />
+
+        <Value name="iconFilename" value="g_customBaseUIFilename"/>
+        <Value name="inputAction" value="MENU_PAGE_PREV"/>
+    </Profile>
+
+    <Profile name="scf_gameMenuPagingButtonRight" extends="scf_gameMenuPagingButtonLeft" with="anchorBottomCenter">
+        <Value name="position" value="0px 40px"/>
+        <Value name="inputAction" value="MENU_PAGE_NEXT"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOptionBg" extends="scf_baseReference" with="anchorTopCenter">
+        <Value name="imageColor" value="$preset_colorMainUI_30"/>
+        <Value name="imageDisabledColor" value="$preset_colorGlass"/>
+        <Value name="size" value="218px 48px"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOptionSettingsBg" extends="scf_multiTextOptionBg" with="anchorMiddleLeft">
+        <Value name="size" value="218px 48px" />
+        <Value name="position" value="449px 0" />
+    </Profile>
+
+    <Profile name="scf_multiTextOptionLeft" extends="scf_buttonBase">
+        <Value name="clickSound" value="NONE"/> <!-- Handled by the element -->
+
+        <Value name="iconColor" value="$preset_colorMainUI"/>
+        <Value name="iconDisabledColor" value="$preset_colorLightGrey"/>
+        <Value name="iconFocusedColor" value="$preset_colorWhite"/>
+        <Value name="iconHighlightedColor" value="$preset_colorGlassDark"/>
+        <Value name="iconUVRotation" value="180"/>
+        <Value name="iconSize" value="18px 18px"/>
+        <Value name="iconTextOffset" value="0"/>
+        <Value name="iconUVs" value="203px 347px 27px 27px"/>
+
+        <Value name="imageColor" value="$preset_colorMainUI_50"/>
+        <Value name="imageDisabledColor" value="$preset_colorGlass"/>
+        <Value name="imageFocusedColor" value="$preset_colorMainUI"/>
+        <Value name="imageHighlightedColor" value="$preset_colorMainUI"/>
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+
+        <Value name="position" value="0"/>
+
+        <Value name="size" value="48px 48px"/>
+
+        <Value name="textAlignment" value="center"/>
+        <Value name="textHighlightedColor" value="$preset_colorWhite"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOptionRight" extends="scf_multiTextOptionLeft" with="anchorBottomRight">
+        <Value name="iconUVRotation" value="0"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOption" extends="scf_baseReference">
+        <Value name="doLockingOnFocus" value="true"/>
+        <Value name="position" value="0"/>
+        <Value name="size" value="316px 48px"/>
+        <Value name="margin" value="0px 0px 24px 0px"/>
+
+        <Value name="imageHighlightedColor" value="$preset_colorMainUI"/>
+        <Value name="iconHighlightedColor" value="$preset_colorBlack3"/>
+        <Value name="textHighlightedColor" value="$preset_colorWhite"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOptionSettings" extends="scf_multiTextOption">
+        <Value name="margin" value="0 12px 0 12px"/>
+        <Value name="size" value="1400px 48px"/>
+    </Profile>
+
+    <Profile name="scf_multiTextOptionSettingsLeft" extends="scf_multiTextOptionLeft" with="anchorMiddleLeft">
+        <Value name="position" value="400px 0px" />
+    </Profile>
+    <Profile name="scf_multiTextOptionSettingsRight" extends="scf_multiTextOptionRight" with="anchorMiddleLeft">
+        <Value name="position" value="668px 0" />
+    </Profile>
+
+    <Profile name="scf_buttonBack" extends="scf_wideButton">
+        <Value name="inputAction" value="MENU_BACK"/>
+        <Value name="clickSound" value="BACK"/>
+
+        <Value name="touchIconUVs" value="342px 342px 24px 36px" />
+        <Value name="touchIconSize" value="24px 36px"/>
+        <Value name="touchIconRotation" value="180" />
+    </Profile>
+
+    <Profile name="scf_wideButton" extends="scf_buttonBase">
+        <Value name="handleFocus" value="false"/>
+        <Value name="size" value="200px 34px"/>
+        <Value name="margin" value="0"/>
+        <Value name="fitToContent" value="true"/>
+        <Value name="fitExtraWidth" value="32px" />
+
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorTransparent"/>
+        <Value name="imageFocusedColor" value="$preset_colorTransparent"/>
+        <Value name="imageHighlightedColor" value="$preset_colorTransparent"/>
+        <Value name="imageSelectedColor" value="$preset_colorTransparent"/>
+        <Value name="imageDisabledColor" value="$preset_colorTransparent"/>
+
+        <Value name="iconFilename" value="g_customBaseUIFilename"/>
+        <Value name="iconUVs" value="$preset_keyBoardKeyUVs"/>
+        <Value name="iconSize" value="36px 36px"/>
+        <Value name="iconTextOffset" value="-8px 0"/>
+        <Value name="iconColor" value="$preset_colorMainUI_60"/>
+        <Value name="iconFocusedColor" value="$preset_colorWhite"/>
+        <Value name="iconHighlightedColor" value="$preset_colorWhite"/>
+        <Value name="iconSelectedColor" value="$preset_colorWhite"/>
+        <Value name="iconDisabledColor" value="$preset_colorDisabled"/>
+
+        <Value name="textAlignment" value="left"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+        <Value name="textSize" value="17px"/>
+        <Value name="textBold" value="true"/>
+        <Value name="textUpperCase" value="true"/>
+        <Value name="textColor" value="$preset_colorMainUI"/>
+        <Value name="textHighlightedColor" value="$preset_colorWhite"/>
+        <Value name="textFocusedColor" value="$preset_colorWhite"/>
+        <Value name="textSelectedColor" value="$preset_colorWhite"/>
+        <Value name="textDisabledColor" value="$preset_colorDisabled"/>
+        <Value name="textMaxNumLines" value="1"/>
+        <Value name="textAutoWidth" value="true"/>
+    </Profile>
+
+    <Profile name="scf_textDefault" extends="scf_baseReference">
+        <Value name="textAlignment" value="left"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+        <Value name="size" value="0 0"/>
+        <Value name="textSize" value="18px"/>
+        <Value name="visible" value="true"/>
+        <Value name="textColor" value="$preset_colorWhite"/>
+        <Value name="textSelectedColor" value="$preset_colorWhite"/>
+        <Value name="textOffset" value="0 0"/>
+        <Value name="textBold" value="false"/>
+        <Value name="text2Size" value="0 0"/>
+        <Value name="text2Color" value="$preset_colorBlack"/>
+        <Value name="text2Offset" value="0 0"/>
+        <Value name="text2Bold" value="false"/>
+    </Profile>
+
+    <Profile name="scf_textInput" extends="scf_textDefault">
+        <Value name="position" value="0"/>
+        <Value name="size" value="316px 48px"/>
+        <Value name="maxInputTextWidth" value="290px"/>
+        <Value name="textSelectedColor" value="$preset_colorWhite"/>
+        <Value name="textSize" value="18px"/>
+        <Value name="textBold" value="false"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+        <Value name="imageUVs" value="$preset_colorUVs"/>
+        <Value name="imageColor" value="$preset_colorMainUI_20"/>
+        <Value name="imageFocusedColor" value="$preset_colorMainUI"/>
+        <Value name="cursorFilename" value="g_customBaseUIFilename"/>
+        <Value name="cursorUVs" value="$preset_colorUVs"/>
+        <Value name="cursorSize" value="1px 20px"/>
+        <Value name="cursorOffset" value="4px -2px"/>
+        <Value name="cursorColor" value="$preset_colorWhite"/>
+        <Value name="imageFilename" value="g_customBaseUIFilename"/>
+    </Profile>
+
+    <Profile name="scf_ingameMenuGameSettingsTextInput" extends="scf_textInput" with="anchorMiddleLeft">
+        <Value name="handleFocus" value="true"/>
+        <Value name="position" value="400px 0"/>
+        <Value name="size" value="316px 48px"/>
+        <Value name="margin" value="30px 28px 49px 16px"/>
+        <Value name="maxInputTextWidth" value="290px"/>
+        <Value name="textSize" value="18px"/>
+        <Value name="textBold" value="false"/>
+        <Value name="textAlignment" value="center"/>
+        <Value name="textVerticalAlignment" value="middle"/>
+    </Profile>
+</GUIProfiles>

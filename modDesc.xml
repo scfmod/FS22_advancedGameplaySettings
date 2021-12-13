@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="61">
+    <author>scfmod</author>
+    <version>0.1.0.0</version>
+    <title>
+        <en>AdvancedGameplaySettings</en>
+    </title>
+    <description>
+        <en><![CDATA[Allows you to modify more advanced gameplay settings]]></en>
+    </description>
+    <iconFilename>store.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="advancedGameplaySettings.lua" />
+    </extraSourceFiles>
+</modDesc>
