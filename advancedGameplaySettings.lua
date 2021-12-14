@@ -618,11 +618,11 @@ BuyPlaceableEvent.run = Utils.appendedFunction(BuyPlaceableEvent.run,
 
 EconomyManager.getBuyPrice = Utils.overwrittenFunction(EconomyManager.getBuyPrice,
     function(self, func, ...)
-        local price = func(self, ...)
-
         if overrideGetBuyPrice ~= true then
-            return price
+            return func(self, ...)
         end
+
+        local price = func(self, ...)
 
         local factor = Utils.getNoNil(g_advancedGameplaySettings:getTypeNameValue('placeable', 'costFactor'), 1.0)
 
