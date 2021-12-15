@@ -307,9 +307,10 @@ FrontloaderAttacher.onPreAttachImplement = Utils.appendedFunction(FrontloaderAtt
 Vehicle.setComponentJointRotLimit = Utils.overwrittenFunction(Vehicle.setComponentJointRotLimit,
     ---@param self Vehicle
     function(self, func, ...)
-        if overrideJointRotLimit ~= true and Utils.getNoNil(g_advancedGameplaySettings:getTypeNameValue('vehicle', 'enableFrontloaderFix'), false) ~= true then
-            func(self, ...)
+        if overrideJointRotLimit == true and Utils.getNoNil(g_advancedGameplaySettings:getTypeNameValue('vehicle', 'enableFrontloaderFix'), false) == true then
+            return
         end
+        func(self, ...)
     end
 )
 
