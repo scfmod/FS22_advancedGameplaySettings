@@ -13,12 +13,12 @@
             <GuiElement type="bitmap" profile="bottomScrollClipper" name="bottomClipper" />
             <GuiElement type="scrollingLayout" profile="ingameMenuSettingsLayout" id="boxLayout" topClipperElementName="topClipper" bottomClipperElementName="bottomClipper">
                 <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
-                    <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="costFactor" onEnterPressed="onEnterPressedCostFactor" imeDescription="Cost factor" imePlaceholder="Cost factor" imeTitle="Cost factor" imeKeyboardType="normal" />
+                    <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="costFactor" onEnterPressed="onEnterPressedTextInput" imeDescription="Cost factor" imePlaceholder="Cost factor" imeTitle="Cost factor" imeKeyboardType="normal" />
                     <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Cost factor" />
                     <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Increase or decrease the cost of foliage landscaping (0 = free)" />
                 </GuiElement>
 
-                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onClickDisableAccessCheck" id="disableAccessCheck">
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disableAccessCheck">
                     <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
                     <GuiElement type="button" profile="multiTextOptionSettingsRight" />
                     <GuiElement type="text" profile="multiTextOptionSettingsText" />
@@ -27,7 +27,7 @@
                     <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Disable ALL checks for foliage landscaping" />
                 </GuiElement>
 
-                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onClickDisableWaterlevelCheck" id="disableWaterlevelCheck">
+                <GuiElement type="checkedOption" profile="multiTextOptionSettings" onClick="onCheckClick" id="disableWaterlevelCheck">
                     <GuiElement type="button" profile="multiTextOptionSettingsLeft" />
                     <GuiElement type="button" profile="multiTextOptionSettingsRight" />
                     <GuiElement type="text" profile="multiTextOptionSettingsText" />
