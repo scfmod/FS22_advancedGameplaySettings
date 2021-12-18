@@ -777,9 +777,7 @@ FSBaseMission.addMoney = Utils.overwrittenFunction(FSBaseMission.addMoney,
         local factor = Utils.getNoNil(g_advancedGameplaySettings:getTypeNameValue('vehicle', 'repaintCostFactor'), 1.0)
         local price = amount * factor
 
-        if price > 0 then
-            func(self, price, ...)
-        end
+        func(self, price, ...)
     end
 )
 
