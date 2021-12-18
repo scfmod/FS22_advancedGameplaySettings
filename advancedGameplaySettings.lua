@@ -784,10 +784,10 @@ FSBaseMission.addMoney = Utils.overwrittenFunction(FSBaseMission.addMoney,
 )
 
 --[[
-    Override wear amount from Wearable:updateWearAmount
+    Override wear and damage amount
 ]]
 
-Wearable.updateWearAmount = Utils.overwrittenFunction(Wearable.updateWearAmount,
+Wearable.updateDamageAmount = Utils.overwrittenFunction(Wearable.updateDamageAmount,
     function(self, func, ...)
         local amount = func(self, ...)
         local factor = Utils.getNoNil(g_advancedGameplaySettings:getTypeNameValue('vehicle', 'wearFactor'), 1.0)
@@ -795,6 +795,7 @@ Wearable.updateWearAmount = Utils.overwrittenFunction(Wearable.updateWearAmount,
         return amount * factor
     end
 )
+
 
 --[[
     Override FillUnit:addUnitFillLevel

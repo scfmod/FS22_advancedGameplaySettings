@@ -41,8 +41,8 @@
 
                 <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
                     <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="wearFactor" onEnterPressed="onEnterPressedTextInput" imeDescription="Cost factor" imePlaceholder="Cost factor" imeTitle="Cost factor" imeKeyboardType="normal" />
-                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Wear factor" />
-                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Increase or decrease the wear factor of vehicles (0 = free)" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTitle" text="Wear & damage factor" />
+                    <GuiElement type="text" profile="multiTextOptionSettingsTooltip" text="Increase or decrease the wear and damage factor of vehicles (0 = free)" />
                 </GuiElement>
 
                 <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
